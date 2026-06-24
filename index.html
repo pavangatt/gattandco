@@ -917,29 +917,45 @@
         <img src="https://images.pexels.com/photos/19810783/pexels-photo-19810783.jpeg?auto=compress&cs=tinysrgb&w=700&h=350&fit=crop" alt="Elder and companion holding hands, India" style="width:100%; height:180px; object-fit:cover; display:block;">
       </div>
     </div>
-    <div class="contact-form">
+
+    <!-- FIXED FORM SECTION -->
+    <form id="careContactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Hidden access key ensures submission routes cleanly to assist@gattandco.com -->
+      <input type="hidden" name="access_key" value="1b4c3c05-a780-44e6-8651-7e1405f688f2">
+      <input type="hidden" name="subject" value="New Care Consultation Request">
+      <input type="hidden" name="to_email" value="assist@gattandco.com">
+
       <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:1.5rem; color:rgba(255,255,255,0.92);">Send us a message</h3>
       <div class="form-row">
-        <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. Ananya Sharma"></div>
-        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 98000 00000"></div>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="form-name" name="name" placeholder="e.g. Ananya Sharma" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="form-phone" name="phone" placeholder="+91 98000 00000" required>
+        </div>
       </div>
       <div class="form-group">
         <label>Service Interested In</label>
-        <select>
+        <select id="form-service" name="service" required>
           <option value="">Select a service</option>
-          <option>Companion Care</option>
-          <option>Daily Living Assistance</option>
-          <option>Elder-Friendly Home Setup</option>
-          <option>Medical Appointment Support</option>
-          <option>Medication Reminders</option>
-          <option>Nutrition &amp; Meal Planning</option>
-          <option>Emergency Assistance</option>
-          <option>Not sure — need guidance</option>
+          <option value="Companion Care">Companion Care</option>
+          <option value="Daily Living Assistance">Daily Living Assistance</option>
+          <option value="Elder-Friendly Home Setup">Elder-Friendly Home Setup</option>
+          <option value="Medical Appointment Support">Medical Appointment Support</option>
+          <option value="Medication Reminders">Medication Reminders</option>
+          <option value="Nutrition & Meal Planning">Nutrition & Smart Meal Planning</option>
+          <option value="Emergency Assistance">Emergency Assistance</option>
+          <option value="Guidance Needed">Not sure — need guidance</option>
         </select>
       </div>
-      <div class="form-group"><label>Message</label><textarea placeholder="Tell us a little about your loved one and what support they need…"></textarea></div>
-      <button class="form-submit">Book Free Consultation →</button>
-    </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="form-message" name="message" placeholder="Tell us a little about your loved one and what support they need…" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Book Free Consultation →</button>
+    </form>
   </div>
 </section>
 
