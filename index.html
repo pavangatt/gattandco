@@ -258,6 +258,7 @@
   .service-icon svg { width: 26px; height: 26px; stroke: var(--green-mid); fill: none; stroke-width: 1.8; }
   .service-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--green-deep); margin-bottom: 0.7rem; }
   .service-desc { font-size: 0.93rem; color: var(--text-light); line-height: 1.7; }
+  .service-card-link { text-decoration: none; color: inherit; display: block; }
 
   /* â”€â”€ IMAGE GALLERY STRIP â”€â”€ */
   .gallery-strip {
@@ -283,14 +284,19 @@
   .gallery-img:hover .caption { transform: translateY(0); }
 
   /* â”€â”€ HOME MOD â”€â”€ */
-  #home-mod {
+  #home-mod,
+  #social-engagement {
     background: linear-gradient(135deg, var(--green-deep) 0%, #3B7A3B 100%);
     color: white; padding: 80px 5vw;
   }
-  #home-mod .section-label { color: var(--gold-light); }
-  #home-mod .section-label::before { background: var(--gold-light); }
-  #home-mod .section-title { color: white; }
-  #home-mod .section-subtitle { color: rgba(255,255,255,0.75); max-width: 580px; }
+  #home-mod .section-label,
+  #social-engagement .section-label { color: var(--gold-light); }
+  #home-mod .section-label::before,
+  #social-engagement .section-label::before { background: var(--gold-light); }
+  #home-mod .section-title,
+  #social-engagement .section-title { color: white; }
+  #home-mod .section-subtitle,
+  #social-engagement .section-subtitle { color: rgba(255,255,255,0.75); max-width: 580px; }
   .home-mod-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 4rem; align-items: center; margin-top: 3rem;
@@ -562,6 +568,7 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
     <li><a href="#home-mod">Home Safety</a></li>
+    <li><a href="#social-engagement">Social Engagement</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#about">About Us</a></li>
     <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
@@ -680,11 +687,11 @@
       <h3>Night-In Care</h3>
       <p class="service-desc">A caring buddy stays overnight for elders who need nighttime reassurance, assistance, or simply the comfort of knowing someone is there through the night.</p>
     </div>
-    <div class="service-card">
+    <a href="#social-engagement" class="service-card service-card-link">
       <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
       <h3>Outings &amp; Social Engagement</h3>
       <p class="service-desc">Safe, supervised outings to parks, community events, and social activities that keep elders engaged, active, and connected.</p>
-    </div>
+    </a>
   </div>
 
   <!-- Photo Gallery Strip -->
@@ -760,6 +767,63 @@
         <div class="mod-quote">
           <blockquote>"A few simple changes made our mother so much more independent and confident at home. We wish we'd done it sooner."</blockquote>
           <cite>— Family of a Suman client</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTINGS & SOCIAL ENGAGEMENT FEATURE -->
+<section id="social-engagement">
+  <div class="section-label">Social Engagement Programme</div>
+  <h2 class="section-title">Stay active, social,<br>and joyfully connected</h2>
+  <p class="section-subtitle">A structured engagement plan that goes beyond outings, including classes and guided learning sessions that keep elders mentally active, emotionally uplifted, and confidently connected with loved ones.</p>
+
+  <div class="home-mod-grid">
+    <div>
+      <div class="mod-list">
+        <div class="mod-item">
+          <div class="mod-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M5 8h14"/><path d="M5 16h14"/></svg></div>
+          <div>
+            <h4>Singing &amp; Music Circles</h4>
+            <p>Friendly small-group sessions with devotional songs, old classics, and rhythm exercises that improve mood, memory recall, and confidence.</p>
+          </div>
+        </div>
+        <div class="mod-item">
+          <div class="mod-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg></div>
+          <div>
+            <h4>Dance &amp; Movement Classes</h4>
+            <p>Chair-friendly dance, gentle movement routines, and balance-focused activity classes designed for safety, flexibility, and joyful participation.</p>
+          </div>
+        </div>
+        <div class="mod-item">
+          <div class="mod-item-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <div>
+            <h4>Community Outings &amp; Hobby Clubs</h4>
+            <p>Supervised park visits, temple visits, storytelling groups, and hobby meetups that encourage social bonding and reduce loneliness.</p>
+          </div>
+        </div>
+        <div class="mod-item">
+          <div class="mod-item-icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg></div>
+          <div>
+            <h4>Technology Learning for Video Meetups</h4>
+            <p>Step-by-step coaching on smartphones, WhatsApp video calls, and video meetup apps so elders can confidently join family calls, classes, and group interactions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="mod-photo-grid">
+        <div class="mod-photo">
+          <img src="https://6a450b17a79068e924d0e706.imgix.net/Gemini_Generated_Image_qgskepqgskepqgsk.png" alt="Elders participating in social engagement activities" />
+        </div>
+        <div class="mod-photo">
+          <img src="https://6a450b17a79068e924d0e706.imgix.net/Gemini_Generated_Image_d1mduzd1mduzd1md.png" alt="Elder learning digital skills for video meetups" />
+        </div>
+        <div class="mod-quote">
+          <blockquote>"The activity sessions and video-call training helped our parents feel socially connected again. They now look forward to every class and family meetup."</blockquote>
+          <cite>— Family supported by Suman</cite>
         </div>
       </div>
     </div>
@@ -978,6 +1042,7 @@
   <div class="footer-links">
     <a href="#services">Services</a>
     <a href="#home-mod">Home Safety</a>
+    <a href="#social-engagement">Social Engagement</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
